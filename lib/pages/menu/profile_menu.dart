@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_navbar/controllers/Login_controller.dart';
 
 class ProfileMenu extends StatelessWidget {
-  const ProfileMenu({super.key});
+  final AuthController authController = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class ProfileMenu extends StatelessWidget {
               tileColor: Colors.red,
               title: Text("Logout"),
               onTap: () {
-                Get.toNamed('/');
+                authController.logout();
               },
             ),
           ],
