@@ -11,7 +11,19 @@ class HomeMenu extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
-      body: Center(child: Text("ini home menu")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Welcome to the League App!",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+          SizedBox(height: 20,),
+          Icon(Icons.sports_soccer_rounded,
+          size: 130,),
+        ],
+      ),
+      )
     );
   }
 }
