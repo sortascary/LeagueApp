@@ -9,7 +9,7 @@ class AuthController extends GetxController {
 
   Future<void> login() async {
     // Replace with your own validation logic
-    if (email.value == 'user@example.com' && password.value == 'password') {
+    if (email.value == 'Admin' && password.value == 'password') {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('email', email.value);
       Get.off(() => DashboardPage());  // Navigate to HomeScreen
