@@ -15,11 +15,18 @@ class Loginpage extends StatelessWidget {
           children: [
             TextField(
               onChanged: (value) => authController.email.value = value,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: InputDecoration(
+                labelText: "User",
+                border: const OutlineInputBorder(),
+              ),
             ),
+            SizedBox(height: 20,),
             TextField(
               onChanged: (value) => authController.password.value = value,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: InputDecoration(
+                labelText: "Password",
+                border: const OutlineInputBorder(),
+              ),
               obscureText: true,
             ),
             SizedBox(height: 20),
