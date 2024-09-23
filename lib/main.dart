@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_navbar/controllers/Login_controller.dart';
 import 'package:learning_navbar/pages/dashboard_page.dart';
 import 'package:learning_navbar/pages/login_page.dart';
 import 'pages/dashboard_nav_drawer.dart';    
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final authController = Get.put(AuthController());
+  
+  bool loggedIn = await authController.isLoggedIn();
+
+  runApp(MyApp(loggedIn: loggedIn));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool loggedIn;
 
-  // This widget is the root of your application.
+  MyApp({required this.loggedIn});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/',
-      getPages: [
-        // list all pages here
-        GetPage(
-          name: '/',
-          page: () => const LoginPage(),
-        ),
-        GetPage(
-          name: '/dashboard',
-          page: () => const DashboardPage(),
-        ),
-      ],
+      home: loggedIn ? DashboardPage() : Loginpage(),
     );
   }
 }
