@@ -22,7 +22,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: loggedIn ? DashboardPage() : Loginpage(),
+      initialRoute: loggedIn ? '/dashboard' : '/',
+      getPages: [
+        // list all pages here
+        GetPage(
+          name: '/',
+          page: () => Loginpage(),
+        ),
+        GetPage(
+          name: '/dashboard',
+          page: () => DashboardPage(),
+        ),
+      ],
     );
   }
 }
