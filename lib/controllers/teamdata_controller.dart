@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:learning_navbar/pages/menu/Leaguelist.dart';
 
-class TeamdataController extends GetxController {
+class LeaguedataController extends GetxController {
   var leagues = [].obs;
   var isLoading = true.obs;
 

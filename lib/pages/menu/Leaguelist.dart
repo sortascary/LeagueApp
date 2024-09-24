@@ -4,7 +4,7 @@ import 'package:learning_navbar/controllers/teamdata_controller.dart';
 import 'package:learning_navbar/pages/Widget/card.dart';
 
 class leagues extends StatelessWidget {
-  final TeamdataController controller = Get.put(TeamdataController());
+  final LeaguedataController controller = Get.put(LeaguedataController());
 
   @override
   Widget build(BuildContext context) {
