@@ -26,7 +26,7 @@ class DashboardPage extends StatelessWidget {
               BottomNavigationBarItem(
                   icon: Icon(Icons.home_outlined), label: "home"),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.sports_soccer_outlined), label: "Teams"),
+                  icon: Icon(Icons.sports_soccer_outlined), label: "Leagues"),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person_2_outlined), label: "profile"),
             ]),
