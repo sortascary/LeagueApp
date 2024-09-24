@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_navbar/Binding/AppBinding.dart';
 import 'package:learning_navbar/controllers/Login_controller.dart';
 import 'package:learning_navbar/pages/dashboard_page.dart';
 import 'package:learning_navbar/pages/login_page.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/dashboard',
-          page: () => DashboardPage(),
+          page: () => DashboardPage(), binding: Appbinding(),
         ),
       ],
     );
