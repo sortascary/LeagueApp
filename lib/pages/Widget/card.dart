@@ -31,21 +31,22 @@ class MyCard extends StatelessWidget {
         onTap();
       },
       child: Card(
+        color: Colors.amber,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.network(
                   image,
-                  height: 50,
+                  height: 75,
                 ),
               ),
-              const SizedBox(width: 16.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -56,6 +57,7 @@ class MyCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(height: 20.0,),
                   Row(
                     children: [
                       const SizedBox(width: 10.0,),
@@ -75,7 +77,7 @@ class MyCard extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(width: 15.0,),
+                      const SizedBox(width: 20.0,),
 
                       GestureDetector(
                         onTap: () async {
@@ -93,7 +95,7 @@ class MyCard extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(width: 15.0,),
+                      const SizedBox(width: 20.0,),
 
                       GestureDetector(
                         onTap: () async {
