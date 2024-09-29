@@ -32,8 +32,8 @@ class ProfileMenu extends StatelessWidget {
                 children: [
                   ListTile(
                     leading: Icon(Icons.account_circle_sharp),
-                    title: Text('About me'),
-                    subtitle: Text('Lorem Ipsum'),
+                    title: Text('Presonalization'),
+                    subtitle: Text('user preference settings'),
                   ),
                   ListTile(
                     leading: Icon(Icons.help),
