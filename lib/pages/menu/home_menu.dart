@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_navbar/controllers/matchdata_controller.dart';
+import 'package:learning_navbar/pages/Widget/mycolors.dart';
 
 class HomeMenu extends StatelessWidget {
   final MatchdataController controller = Get.put(MatchdataController());
@@ -10,7 +11,7 @@ class HomeMenu extends StatelessWidget {
     return Scaffold(
         backgroundColor: Color(0xFFEB5B00),
         appBar: AppBar(
-          backgroundColor: Color(0xFFE4003A),
+          backgroundColor: colornav,
           title: Text(
             "Recent matches",
             style: TextStyle(color: Colors.white),

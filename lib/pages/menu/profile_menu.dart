@@ -28,13 +28,16 @@ class ProfileMenu extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(height: 20),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(150.0),
+              child: Image.asset(
+                'lib/images/yee.jpeg',
+                height: 150,
+              ),
             ),
             SizedBox(height: 20),
             Text(
-              'Nama Pengguna',
+              'Dzaky Ihsan Rasyid',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
@@ -43,13 +46,12 @@ class ProfileMenu extends StatelessWidget {
               child: ListView(
                 children: [
                   ListTile(
-                    leading:
-                        Icon(color: Colors.white, Icons.account_circle_sharp),
+                    leading: Icon(Icons.account_circle_sharp),
                     title: Text('Presonalization'),
                     subtitle: Text('user preference settings'),
                   ),
                   ListTile(
-                    leading: Icon(color: Colors.white, Icons.help),
+                    leading: Icon(Icons.help),
                     title: Text('Bantuan'),
                     onTap: () {},
                   ),

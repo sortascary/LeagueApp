@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_navbar/controllers/teamdata_controller.dart';
 import 'package:learning_navbar/pages/Widget/card.dart';
+import 'package:learning_navbar/pages/Widget/mycolors.dart';
 
 class leagues extends StatelessWidget {
   final LeaguedataController controller = Get.put(LeaguedataController());
@@ -9,9 +10,9 @@ class leagues extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFEB5B00),
+      backgroundColor: colorback,
       appBar: AppBar(
-        backgroundColor: Color(0xFFE4003A),
+        backgroundColor: colornav,
         title: Text("View the Leagues",
           style: TextStyle(
             color: Colors.white
