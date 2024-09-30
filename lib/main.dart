@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: Appbinding(),
       initialRoute: loggedIn ? '/dashboard' : '/',
       getPages: [
         // list all pages here

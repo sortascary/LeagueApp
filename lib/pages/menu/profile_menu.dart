@@ -12,6 +12,13 @@ class ProfileMenu extends StatelessWidget {
           title: Text('Profile'),
           automaticallyImplyLeading: false,
           centerTitle: true,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  authController.logout();
+                },
+                icon: Icon(Icons.exit_to_app))
+          ],
         ),
         body: Column(
           children: [
@@ -42,14 +49,6 @@ class ProfileMenu extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            ListTile(
-              leading: Icon(Icons.exit_to_app),
-              tileColor: Colors.red,
-              title: Text("Logout"),
-              onTap: () {
-                authController.logout();
-              },
             ),
           ],
         ));

@@ -10,6 +10,7 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(DashboardController());
     
     final DashboardController dashboardController = Get.find();
 
