@@ -9,10 +9,10 @@ class AuthController extends GetxController {
 
   Future<void> login() async {
     // Replace with your own validation logic
-    if (email.value == 'Admin' && password.value == 'password') {
+    if (email.value == 'Dzaky Ihsan Rasyid' && password.value == 'password') {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('email', email.value);
-      Get.off(() => DashboardPage());  // Navigate to HomeScreen
+      Get.off(() => const DashboardPage());  // Navigate to HomeScreen
     } else {
       Get.snackbar('Login Failed', 'Invalid credentials');
     }

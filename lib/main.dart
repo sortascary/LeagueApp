@@ -18,7 +18,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   final bool loggedIn;
 
-  MyApp({required this.loggedIn});
+  const MyApp({super.key, required this.loggedIn});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/dashboard',
-          page: () => DashboardPage(), binding: Appbinding(),
+          page: () => const DashboardPage(), binding: Appbinding(),
         ),
       ],
     );
