@@ -9,8 +9,13 @@ class leagues extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEB5B00),
       appBar: AppBar(
-        title: Text("View the Leagues"),
+        backgroundColor: Color(0xFFE4003A),
+        title: Text("View the Leagues",
+          style: TextStyle(
+            color: Colors.white
+          ),),
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
