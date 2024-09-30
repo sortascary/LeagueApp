@@ -8,8 +8,13 @@ class ProfileMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEB5B00),
         appBar: AppBar(
-          title: Text('Profile'),
+          backgroundColor: Color(0xFFE4003A),
+          title: Text('Profile',
+          style: TextStyle(
+            color: Colors.white
+          ),),
           automaticallyImplyLeading: false,
           centerTitle: true,
           actions: [

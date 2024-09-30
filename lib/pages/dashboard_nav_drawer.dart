@@ -15,7 +15,7 @@ class DashboardNavDrawer extends StatelessWidget {
     final DashboardController dashboardController =
         Get.put(DashboardController());
 
-    final List<Widget> menus = [const HomeMenu(), leagues(), ProfileMenu()];
+    final List<Widget> menus = [ HomeMenu(), leagues(), ProfileMenu()];
 
     return Obx(() {
       return Scaffold(
