@@ -28,7 +28,7 @@ class HomeMenu extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                "League Matches", // Your text above the ListView
+                "Recent Matches",
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
