@@ -13,10 +13,10 @@ class leagues extends StatelessWidget {
       backgroundColor: colorback,
       appBar: AppBar(
         backgroundColor: colornav,
-        title: Text("View the Leagues",
-          style: TextStyle(
-            color: Colors.white
-          ),),
+        title: Text(
+          "View the Leagues",
+          style: TextStyle(color: Colors.white),
+        ),
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
@@ -35,17 +35,19 @@ class leagues extends StatelessWidget {
             final team = controller.leagues[index];
             final teamName = team['strLeague'];
             final teamImg = team['strBadge'];
-            final teamfacebook = team['strFacebook'];
-            final teamwebsite = team['strWebsite'];
-            final teamtwitter = team['strTwitter'];
+            final teamFacebook = team['strFacebook'];
+            final teamWebsite = team['strWebsite'];
+            final teamTwitter = team['strTwitter'];
 
             return MyCard(
               image: teamImg,
               teamname: teamName,
-              onTap: () {},
-              facebook: teamfacebook,
-              website: teamwebsite,
-              twitter: teamtwitter,
+              onTap: () => controller.togglelike(index),
+              facebook: teamFacebook,
+              website: teamWebsite,
+              twitter: teamTwitter,
+              liked: controller.liked[index], 
+              num: index,
             );
           },
         );

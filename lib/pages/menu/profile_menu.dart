@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_navbar/controllers/Login_controller.dart';
+import 'package:learning_navbar/pages/favourites.dart';
 
 class ProfileMenu extends StatelessWidget {
   final AuthController authController = Get.put(AuthController());
@@ -49,6 +50,13 @@ class ProfileMenu extends StatelessWidget {
                     leading: Icon(Icons.account_circle_sharp),
                     title: Text('Presonalization'),
                     subtitle: Text('user preference settings'),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.star),
+                    title: Text("Favourites"),
+                    onTap: () {
+                      Get.to(favourites());
+                    },
                   ),
                   ListTile(
                     leading: Icon(Icons.help),
